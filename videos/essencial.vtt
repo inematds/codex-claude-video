@@ -1,0 +1,465 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:01.980
+Você pede um plano para a IA
+
+2
+00:00:01.980 --> 00:00:04.200
+e pede para ela mesma revisar.
+
+3
+00:00:04.200 --> 00:00:05.640
+Ela aprova.
+
+4
+00:00:05.640 --> 00:00:06.300
+Sempre.
+
+5
+00:00:06.300 --> 00:00:08.020
+O modelo que escreveu o plano,
+
+6
+00:00:08.020 --> 00:00:09.720
+ainda mais na mesma sessão,
+
+7
+00:00:09.720 --> 00:00:11.540
+tende a achar que está tudo certo.
+
+8
+00:00:11.540 --> 00:00:12.700
+Eu sou Nei Maldaner,
+
+9
+00:00:12.700 --> 00:00:14.020
+e a saída é simples:
+
+10
+00:00:14.020 --> 00:00:16.800
+um planeja, o outro critica.
+
+11
+00:00:16.820 --> 00:00:18.880
+Claude e Codex se completam quando cada
+
+12
+00:00:18.880 --> 00:00:20.420
+um faz uma parte e o outro
+
+13
+00:00:20.420 --> 00:00:21.740
+confere o artefato real.
+
+14
+00:00:21.740 --> 00:00:23.800
+Neste vídeo eu mostro como usar os
+
+15
+00:00:23.800 --> 00:00:25.140
+dois juntos
+
+16
+00:00:25.300 --> 00:00:26.780
+e tudo o que o INEMA já
+
+17
+00:00:26.780 --> 00:00:27.800
+tem pronto sobre isso:
+
+18
+00:00:27.800 --> 00:00:28.900
+cursos,
+
+19
+00:00:28.900 --> 00:00:30.460
+kits e ferramentas,
+
+20
+00:00:30.460 --> 00:00:31.820
+todos abertos.
+
+21
+00:00:31.820 --> 00:00:34.080
+A base é o kit Use Both,
+
+22
+00:00:34.080 --> 00:00:35.540
+de Mark Kashef,
+
+23
+00:00:35.540 --> 00:00:36.860
+com licença aberta.
+
+24
+00:00:36.860 --> 00:00:38.500
+Ele organiza o trabalho com as duas
+
+25
+00:00:38.500 --> 00:00:40.080
+ferramentas em seis níveis,
+
+26
+00:00:40.080 --> 00:00:42.860
+com prompts prontos e duas skills pequenas,
+
+27
+00:00:42.860 --> 00:00:44.460
+handoff e prime,
+
+28
+00:00:44.460 --> 00:00:46.760
+para trocar de assistente sem explicar o
+
+29
+00:00:46.760 --> 00:00:47.620
+projeto de novo.
+
+30
+00:00:47.620 --> 00:00:49.960
+E existe uma regra que atravessa todos
+
+31
+00:00:49.960 --> 00:00:52.840
+os níveis: o segundo assistente recebe o
+
+32
+00:00:52.840 --> 00:00:54.640
+mesmo briefing e o artefato real.
+
+33
+00:00:54.640 --> 00:00:56.920
+O arquivo, o diff,
+
+34
+00:00:56.920 --> 00:00:58.480
+a imagem.
+
+35
+00:00:58.520 --> 00:01:00.380
+Nunca um resumo vago do que o
+
+36
+00:01:00.380 --> 00:01:01.600
+primeiro fez.
+
+37
+00:01:01.600 --> 00:01:03.940
+Nível um: deixar as duas discutirem.
+
+38
+00:01:03.940 --> 00:01:05.340
+Uma escreve o plano,
+
+39
+00:01:05.340 --> 00:01:07.220
+a outra critica o mesmo arquivo,
+
+40
+00:01:07.220 --> 00:01:09.520
+só lendo, com evidência e gravidade.
+
+41
+00:01:09.520 --> 00:01:11.160
+No máximo duas rodadas,
+
+42
+00:01:11.160 --> 00:01:13.820
+porque duas IAs concordando não é prova.
+
+43
+00:01:13.820 --> 00:01:15.480
+Nível dois, opcional:
+
+44
+00:01:15.480 --> 00:01:18.160
+gerar imagens, só se houver ferramenta de
+
+45
+00:01:18.160 --> 00:01:19.100
+imagem na sessão,
+
+46
+00:01:19.100 --> 00:01:21.020
+e o pronto é o arquivo real
+
+47
+00:01:21.020 --> 00:01:22.120
+aberto no tamanho de uso.
+
+48
+00:01:22.120 --> 00:01:23.320
+Nível
+
+49
+00:01:24.130 --> 00:01:27.240
+três: dividir construir e revisar.
+
+50
+00:01:27.240 --> 00:01:28.780
+Uma constrói num branch,
+
+51
+00:01:28.780 --> 00:01:31.140
+a outra revisa o diff com o
+
+52
+00:01:31.140 --> 00:01:32.020
+briefing e os testes.
+
+53
+00:01:32.020 --> 00:01:32.920
+Quem
+
+54
+00:01:32.920 --> 00:01:34.720
+decide o que entra são os testes
+
+55
+00:01:34.720 --> 00:01:36.080
+e você.
+
+56
+00:01:36.160 --> 00:01:37.980
+Nível quatro: uso
+
+57
+00:01:37.980 --> 00:01:39.300
+supervisionado do computador.
+
+58
+00:01:39.300 --> 00:01:41.840
+O assistente prepara a ação numa interface
+
+59
+00:01:41.840 --> 00:01:43.440
+e para antes de enviar.
+
+60
+00:01:43.440 --> 00:01:44.380
+Senha,
+
+61
+00:01:44.380 --> 00:01:47.360
+pagamento e envios importantes ficam com você.
+
+62
+00:01:47.360 --> 00:01:48.560
+Nível
+
+63
+00:01:48.570 --> 00:01:49.700
+cinco: meta
+
+64
+00:01:49.700 --> 00:01:50.780
+com condição de parada.
+
+65
+00:01:50.780 --> 00:01:51.940
+Objetivo
+
+66
+00:01:51.940 --> 00:01:53.200
+com sucesso observável,
+
+67
+00:01:53.200 --> 00:01:55.300
+quais testes, qual saída,
+
+68
+00:01:55.300 --> 00:01:56.740
+e limites de arquivos,
+
+69
+00:01:56.740 --> 00:01:58.300
+rodadas e gasto.
+
+70
+00:01:58.300 --> 00:02:01.020
+Pedir para parar em duas horas é
+
+71
+00:02:01.020 --> 00:02:02.900
+um pedido, não um limite.
+
+72
+00:02:02.900 --> 00:02:04.860
+Nível seis: handoff
+
+73
+00:02:04.860 --> 00:02:05.660
+e prime.
+
+74
+00:02:05.660 --> 00:02:07.840
+O handoff grava o estado num arquivo
+
+75
+00:02:07.840 --> 00:02:10.000
+portátil, e o prime faz o próximo
+
+76
+00:02:10.000 --> 00:02:12.200
+assistente ler e verificar esse estado antes
+
+77
+00:02:12.200 --> 00:02:12.700
+de continuar.
+
+78
+00:02:12.733 --> 00:02:14.753
+E o que você tem à disposição,
+
+79
+00:02:14.753 --> 00:02:16.253
+tudo aberto.
+
+80
+00:02:16.253 --> 00:02:18.693
+Seis cursos: Claude para Codex,
+
+81
+00:02:18.693 --> 00:02:20.353
+em português, inglês e espanhol;
+
+82
+00:02:20.353 --> 00:02:21.453
+Codex
+
+83
+00:02:21.453 --> 00:02:23.733
+Básico, o curso completo do Codex CLI;
+
+84
+00:02:23.733 --> 00:02:24.833
+Master
+
+85
+00:02:24.833 --> 00:02:27.863
+Codex, a fábrica de SaaS com agentes;
+
+86
+00:02:27.863 --> 00:02:29.653
+iClaudeX, planejamento
+
+87
+00:02:29.653 --> 00:02:31.993
+com Claude e Codex no terminal;
+
+88
+00:02:31.993 --> 00:02:35.833
+MakeClaudeX, do prompt ao plugin de produção;
+
+89
+00:02:35.833 --> 00:02:37.033
+e
+
+90
+00:02:37.124 --> 00:02:39.250
+DeepClaudeX, multi modelo setenta,
+
+91
+00:02:39.250 --> 00:02:40.313
+vinte, dez.
+
+92
+00:02:40.313 --> 00:02:41.693
+E os kits:
+
+93
+00:02:41.693 --> 00:02:43.293
+o agente claude codex,
+
+94
+00:02:43.293 --> 00:02:45.633
+para migrar ou ficar agnóstico;
+
+95
+00:02:45.633 --> 00:02:46.853
+o Use Both,
+
+96
+00:02:46.853 --> 00:02:48.073
+com os seis níveis;
+
+97
+00:02:48.073 --> 00:02:49.893
+a CLI claudex;
+
+98
+00:02:49.893 --> 00:02:51.573
+e o Codex Cheat Sheet,
+
+99
+00:02:51.573 --> 00:02:52.833
+a referência rápida.
+
+100
+00:02:52.833 --> 00:02:55.393
+Tudo com repositório no GitHub.
+
+101
+00:02:55.393 --> 00:02:56.753
+Por onde começar?
+
+102
+00:02:56.753 --> 00:02:58.813
+Escolha uma tarefa pequena.
+
+103
+00:02:58.813 --> 00:03:01.153
+Escreva o briefing e o critério de
+
+104
+00:03:01.153 --> 00:03:01.753
+aceite.
+
+105
+00:03:01.753 --> 00:03:03.593
+Peça o plano a um e a
+
+106
+00:03:03.593 --> 00:03:04.673
+crítica ao outro,
+
+107
+00:03:04.673 --> 00:03:06.033
+sobre o mesmo arquivo,
+
+108
+00:03:06.033 --> 00:03:07.653
+no máximo duas rodadas.
+
+109
+00:03:07.653 --> 00:03:09.693
+E, antes de fechar a sessão,
+
+110
+00:03:09.693 --> 00:03:11.733
+faça o handoff.
+
+111
+00:03:11.953 --> 00:03:14.823
+Tudo isso está na área Codex mais
+
+112
+00:03:14.823 --> 00:03:17.293
+Claude, em eventos ponto inema ponto pro,
+
+113
+00:03:17.293 --> 00:03:18.253
+barra
+
+114
+00:03:18.253 --> 00:03:20.393
+codex claude, em português,
+
+115
+00:03:20.393 --> 00:03:22.233
+inglês e espanhol.
+
+116
+00:03:22.233 --> 00:03:24.653
+Conteúdo aberto do INEMA ponto CLUB.

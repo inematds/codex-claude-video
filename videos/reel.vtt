@@ -1,0 +1,209 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:01.980
+Você pede um plano para a IA
+
+2
+00:00:01.980 --> 00:00:04.200
+e pede para ela mesma revisar.
+
+3
+00:00:04.200 --> 00:00:05.640
+Ela aprova.
+
+4
+00:00:05.640 --> 00:00:06.300
+Sempre.
+
+5
+00:00:06.300 --> 00:00:08.020
+O modelo que escreveu o plano,
+
+6
+00:00:08.020 --> 00:00:09.720
+ainda mais na mesma sessão,
+
+7
+00:00:09.720 --> 00:00:11.540
+tende a achar que está tudo certo.
+
+8
+00:00:11.540 --> 00:00:12.700
+Eu sou Nei Maldaner,
+
+9
+00:00:12.700 --> 00:00:14.020
+e a saída é simples:
+
+10
+00:00:14.020 --> 00:00:16.800
+um planeja, o outro critica.
+
+11
+00:00:16.820 --> 00:00:18.880
+Claude e Codex se completam quando cada
+
+12
+00:00:18.880 --> 00:00:20.420
+um faz uma parte e o outro
+
+13
+00:00:20.420 --> 00:00:21.740
+confere o artefato real.
+
+14
+00:00:21.740 --> 00:00:23.800
+Neste vídeo eu mostro como usar os
+
+15
+00:00:23.800 --> 00:00:25.140
+dois juntos
+
+16
+00:00:25.300 --> 00:00:26.780
+e tudo o que o INEMA já
+
+17
+00:00:26.780 --> 00:00:27.800
+tem pronto sobre isso:
+
+18
+00:00:27.800 --> 00:00:28.900
+cursos,
+
+19
+00:00:28.900 --> 00:00:30.460
+kits e ferramentas,
+
+20
+00:00:30.460 --> 00:00:31.820
+todos abertos.
+
+21
+00:00:31.820 --> 00:00:34.080
+A base é o kit Use Both,
+
+22
+00:00:34.080 --> 00:00:35.540
+de Mark Kashef,
+
+23
+00:00:35.540 --> 00:00:36.860
+com licença aberta.
+
+24
+00:00:36.860 --> 00:00:38.500
+Ele organiza o trabalho com as duas
+
+25
+00:00:38.500 --> 00:00:40.080
+ferramentas em seis níveis,
+
+26
+00:00:40.080 --> 00:00:42.860
+com prompts prontos e duas skills pequenas,
+
+27
+00:00:42.860 --> 00:00:44.460
+handoff e prime,
+
+28
+00:00:44.460 --> 00:00:46.760
+para trocar de assistente sem explicar o
+
+29
+00:00:46.760 --> 00:00:47.620
+projeto de novo.
+
+30
+00:00:47.620 --> 00:00:49.960
+E existe uma regra que atravessa todos
+
+31
+00:00:49.960 --> 00:00:52.840
+os níveis: o segundo assistente recebe o
+
+32
+00:00:52.840 --> 00:00:54.640
+mesmo briefing e o artefato real.
+
+33
+00:00:54.640 --> 00:00:56.920
+O arquivo, o diff,
+
+34
+00:00:56.920 --> 00:00:58.480
+a imagem.
+
+35
+00:00:58.520 --> 00:01:00.380
+Nunca um resumo vago do que o
+
+36
+00:01:00.380 --> 00:01:01.600
+primeiro fez.
+
+37
+00:01:01.600 --> 00:01:02.960
+Por onde começar?
+
+38
+00:01:02.960 --> 00:01:05.020
+Escolha uma tarefa pequena.
+
+39
+00:01:05.020 --> 00:01:07.360
+Escreva o briefing e o critério de
+
+40
+00:01:07.360 --> 00:01:07.960
+aceite.
+
+41
+00:01:07.960 --> 00:01:09.800
+Peça o plano a um e a
+
+42
+00:01:09.800 --> 00:01:10.880
+crítica ao outro,
+
+43
+00:01:10.880 --> 00:01:12.240
+sobre o mesmo arquivo,
+
+44
+00:01:12.240 --> 00:01:13.860
+no máximo duas rodadas.
+
+45
+00:01:13.860 --> 00:01:15.900
+E, antes de fechar a sessão,
+
+46
+00:01:15.900 --> 00:01:17.940
+faça o handoff.
+
+47
+00:01:18.160 --> 00:01:21.030
+Tudo isso está na área Codex mais
+
+48
+00:01:21.030 --> 00:01:23.500
+Claude, em eventos ponto inema ponto pro,
+
+49
+00:01:23.500 --> 00:01:24.460
+barra
+
+50
+00:01:24.460 --> 00:01:26.600
+codex claude, em português,
+
+51
+00:01:26.600 --> 00:01:28.440
+inglês e espanhol.
+
+52
+00:01:28.440 --> 00:01:30.860
+Conteúdo aberto do INEMA ponto CLUB.
