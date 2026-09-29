@@ -1,0 +1,140 @@
+{
+ "block": "pt-b01",
+ "scenes": {
+  "1": {
+   "takeaway": "Não é Claude **ou** Codex. É um **fazer** e o outro **conferir**.",
+   "shots": [
+    {"type": "chat", "at": "Você pede um plano", "title": "A MESMA IA, REVISANDO A SI MESMA",
+     "messages": [
+      {"role": "user", "text": "Escreva o plano.", "at": "Você pede um plano"},
+      {"role": "user", "text": "Agora revise o seu plano.", "at": "ela mesma revisar"},
+      {"role": "ai", "text": "Está ótimo. **Aprovado.**", "at": "Ela aprova"},
+      {"role": "note", "text": "Sempre.", "at": "Sempre"}
+     ]},
+    {"type": "statement", "at": "O modelo que escreveu", "text": "Autorrevisão → ~~tudo certo~~",
+     "strike_at": "achar que está tudo",
+     "then": {"at": "a saída é simples", "text": "Um **planeja**, o outro **critica**"}},
+    {"type": "compare", "at": "Claude e Codex se",
+     "left": {"title": "CLAUDE", "at": "Claude e Codex", "tone": "neutral", "lines": [{"text": "faz uma parte", "at": "cada um faz"}]},
+     "right": {"title": "CODEX", "at": "e o outro confere", "tone": "good", "lines": [{"text": "confere o **artefato real**", "at": "o artefato real"}]},
+     "verdict": {"text": "Os dois **juntos**", "at": "usar os dois juntos"}},
+    {"type": "bullets", "at": "tudo o que o", "title": "PRONTO NO INEMA", "layout": "row",
+     "items": [
+      {"text": "**Cursos**", "icon": "book", "at": "cursos"},
+      {"text": "**Kits**", "icon": "box", "at": "kits e ferramentas"},
+      {"text": "**Ferramentas**", "icon": "gear", "at": "ferramentas"},
+      {"text": "Tudo **aberto**", "icon": "globe", "at": "todos abertos"}
+     ]}
+   ]
+  },
+  "2": {
+   "takeaway": "O segundo recebe o **mesmo briefing** e o **artefato real**.",
+   "shots": [
+    {"type": "keyword", "at": "A base é o", "text": "**Use Both**", "sub": "Claude + Codex Workflow Kit · Mark Kashef · MIT", "sub_at": "de Mark Kashef"},
+    {"type": "hub", "at": "Ele organiza o trabalho",
+     "center": {"label": "Use Both", "icon": "box", "at": "Ele organiza o trabalho"},
+     "nodes": [
+      {"label": "6 níveis", "icon": "list", "at": "em seis níveis"},
+      {"label": "Prompts prontos", "icon": "doc", "at": "com prompts prontos"},
+      {"label": "Skill handoff", "icon": "upload", "at": "handoff e prime"},
+      {"label": "Skill prime", "icon": "download", "at": "handoff e prime"},
+      {"label": "Troca de assistente", "icon": "refresh", "at": "para trocar de assistente"}
+     ]},
+    {"type": "statement", "at": "E existe uma regra", "text": "A REGRA: **mesmo briefing** + **artefato real**"},
+    {"type": "compare", "at": "O arquivo, o diff",
+     "left": {"title": "NUNCA", "at": "Nunca um resumo", "tone": "bad", "lines": [{"text": "resumo vago do que o primeiro fez", "at": "resumo vago"}]},
+     "right": {"title": "SEMPRE", "at": "O arquivo, o diff", "tone": "good", "lines": [
+      {"text": "o **arquivo**", "at": "O arquivo"},
+      {"text": "o **diff**", "at": "o diff"},
+      {"text": "a **imagem**", "at": "a imagem"}
+     ]}}
+   ]
+  },
+  "3": {
+   "takeaway": "Testes e **a sua aprovação** decidem o que entra.",
+   "shots": [
+    {"type": "chat", "at": "Nível um", "title": "NÍVEL 1 · DEIXAR AS DUAS DISCUTIREM",
+     "messages": [
+      {"role": "user", "text": "Claude: escreve o **plano**", "at": "Uma escreve o plano"},
+      {"role": "ai", "text": "Codex: critica o mesmo arquivo, **só lendo**", "at": "a outra critica"},
+      {"role": "note", "text": "evidência + gravidade", "at": "com evidência e gravidade"},
+      {"role": "note", "text": "máx. **2 rodadas**", "at": "No máximo duas rodadas"}
+     ]},
+    {"type": "statement", "at": "porque duas IAs", "text": "Duas IAs concordando = ~~prova~~",
+     "strike_at": "não é prova"},
+    {"type": "fields", "at": "Nível dois", "title": "NÍVEL 2 · GERAR IMAGENS (OPCIONAL)",
+     "fields": [
+      {"label": "Condição", "value": "ferramenta de imagem na sessão", "at": "só se houver"},
+      {"label": "Pronto", "value": "o **arquivo real**", "at": "o pronto é"},
+      {"label": "Conferir", "value": "no tamanho de uso", "at": "no tamanho de uso"}
+     ]},
+    {"type": "flow", "at": "Nível três",
+     "nodes": [
+      {"id": "b", "label": "Constrói no branch", "icon": "code", "col": 0, "row": 1, "at": "Uma constrói num"},
+      {"id": "r", "label": "Revisa o diff", "icon": "eye", "col": 2, "row": 1, "at": "a outra revisa"},
+      {"id": "t", "label": "Testes + você", "icon": "check", "col": 4, "row": 1, "at": "Quem decide o que"}
+     ],
+     "edges": [
+      {"from": "b", "to": "r", "at": "a outra revisa", "label": "diff"},
+      {"from": "r", "to": "t", "at": "Quem decide o que", "label": "decide"}
+     ]}
+   ]
+  },
+  "4": {
+   "takeaway": "Meta precisa de **limite real**, não de um pedido de prazo.",
+   "shots": [
+    {"type": "steps", "at": "Nível quatro", "goal": "NÍVEL 4 · USO SUPERVISIONADO DO COMPUTADOR",
+     "steps": [
+      {"title": "Prepara a ação", "at": "O assistente prepara"},
+      {"title": "Para antes de enviar", "at": "para antes de enviar"},
+      {"title": "Senha e pagamento: **você**", "at": "Senha, pagamento"}
+     ]},
+    {"type": "fields", "at": "Nível cinco", "title": "NÍVEL 5 · META COM CONDIÇÃO DE PARADA",
+     "fields": [
+      {"label": "Sucesso", "value": "observável", "at": "sucesso observável"},
+      {"label": "Prova", "value": "quais testes, qual saída", "at": "quais testes"},
+      {"label": "Limites", "value": "arquivos · rodadas · gasto", "at": "e limites de arquivos"}
+     ],
+     "stamp": {"text": "LIMITE REAL", "at": "rodadas e gasto"}},
+    {"type": "statement", "at": "Pedir para parar", "text": "\"Pare em 2 horas\" = ~~limite~~",
+     "strike_at": "não um limite",
+     "then": {"at": "Nível seis", "text": "**Nível 6** · handoff e prime"}},
+    {"type": "flow", "at": "O handoff grava",
+     "nodes": [
+      {"id": "a", "label": "Assistente A", "icon": "bot", "col": 0, "row": 1, "at": "O handoff grava"},
+      {"id": "f", "label": "handoff.md", "icon": "doc", "col": 2, "row": 1, "at": "num arquivo portátil"},
+      {"id": "b", "label": "Assistente B", "icon": "bot", "col": 4, "row": 1, "at": "o próximo assistente"}
+     ],
+     "edges": [
+      {"from": "a", "to": "f", "at": "num arquivo portátil", "label": "handoff"},
+      {"from": "f", "to": "b", "at": "ler e verificar", "label": "prime"}
+     ]}
+   ]
+  },
+  "5": {
+   "takeaway": "Escolhas editoriais, não ranking. Fique com a rota que der **melhor evidência**.",
+   "shots": [
+    {"type": "lanes", "at": "Na prática, quem faz",
+     "lanes": [
+      {"title": "CLAUDE", "sub": "primeira passada", "icon": "pencil"},
+      {"title": "CODEX", "sub": "segunda passada", "icon": "search"}
+     ],
+     "items": [
+      {"lane": 0, "text": "**Planejar**", "at": "o Claude escreve"},
+      {"lane": 1, "text": "critica as **premissas**", "at": "o Codex critica"},
+      {"lane": 0, "text": "**Construir** a feature", "at": "o Claude constrói"},
+      {"lane": 1, "text": "revisa o **diff**", "at": "o Codex revisa"},
+      {"lane": 1, "text": "**Bug difícil** com meta", "at": "Para um bug"}
+     ]},
+    {"type": "bullets", "at": "Para revisar um documento", "title": "E MAIS", "layout": "column",
+     "items": [
+      {"text": "**Documento:** um escreve, o outro confere os fatos", "icon": "doc", "at": "Para revisar um documento"},
+      {"text": "**Trocar de sessão:** handoff + prime", "icon": "refresh", "at": "trocar de sessão"}
+     ]},
+    {"type": "statement", "at": "Atenção: são escolhas", "text": "~~ranking medido~~ → **escolhas editoriais**",
+     "strike_at": "não um ranking",
+     "then": {"at": "Teste e fique", "text": "Teste. Fique com a **melhor evidência**."}}
+   ]
+  }
+ }
+}
