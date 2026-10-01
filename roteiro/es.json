@@ -1,0 +1,156 @@
+[
+  {
+    "chapter": "Apertura",
+    "title": "Uno planifica, el otro critica",
+    "kind": "compare",
+    "labels": [
+      "La IA aprueba su propio plan",
+      "Otro modelo encuentra las fallas",
+      "Claude + Codex",
+      "Uno lo hace, el otro lo revisa"
+    ],
+    "takeaway": "No es Claude o Codex. Uno lo hace y el otro lo revisa.",
+    "source": "https://eventos.inema.pro/codex-claude/",
+    "speech": "Le pides un plan a la IA y le pides que ella misma lo revise. Lo aprueba. Siempre. El modelo que escribió el plan, sobre todo en la misma sesión, tiende a pensar que todo está bien. Soy Nei Maldaner, y la solución es simple: uno planifica, el otro critica. Claude y Codex se complementan cuando cada uno hace una parte y el otro revisa el resultado real. En este video te muestro cómo usar los dos juntos y todo lo que INEMA ya tiene listo sobre el tema: cursos, kits y herramientas, todos abiertos."
+  },
+  {
+    "chapter": "La regla",
+    "title": "El mismo briefing, el archivo real",
+    "kind": "flow",
+    "labels": [
+      "El mismo briefing",
+      "El archivo real",
+      "Nunca un resumen vago",
+      "Handoff y prime"
+    ],
+    "takeaway": "El segundo asistente recibe el mismo briefing y el archivo real.",
+    "source": "https://eventos.inema.pro/codex-claude/#juntos",
+    "speech": "La base es el kit Use Both, de Mark Kashef, con licencia abierta. Organiza el trabajo con las dos herramientas en seis niveles, con prompts listos y dos skills pequeñas, handoff y prime, para cambiar de asistente sin tener que explicar el proyecto otra vez. Y hay una regla que atraviesa todos los niveles: el segundo asistente recibe el mismo briefing y el archivo real. El archivo, el diff, la imagen. Nunca un resumen vago de lo que hizo el primero."
+  },
+  {
+    "chapter": "Los seis niveles",
+    "title": "Niveles 1 a 3: debatir, generar, revisar",
+    "kind": "steps",
+    "labels": [
+      "1 · Dejar que los dos debatan",
+      "2 · Generar imágenes (opcional)",
+      "3 · Construir y revisar el diff",
+      "Como máximo, dos rondas"
+    ],
+    "takeaway": "Las pruebas y tu aprobación deciden qué se incorpora.",
+    "source": "https://eventos.inema.pro/codex-claude/#juntos",
+    "speech": "Nivel uno: dejar que los dos debatan. Uno escribe el plan; el otro critica el mismo archivo, solo leyendo, con evidencia y gravedad. Como máximo, dos rondas, porque que dos IA estén de acuerdo no es una prueba. Nivel dos, opcional: generar imágenes, solo si hay una herramienta de imagen en la sesión; el resultado listo es el archivo real abierto al tamaño de uso. Nivel tres: dividir la construcción y la revisión. Uno construye en una rama y el otro revisa el diff con el briefing y las pruebas. Las pruebas y tú deciden qué se incorpora."
+  },
+  {
+    "chapter": "Los seis niveles",
+    "title": "Niveles 4 a 6: computadora, meta, handoff",
+    "kind": "steps",
+    "labels": [
+      "4 · Uso supervisado de la computadora",
+      "5 · Meta con condición de parada",
+      "6 · Handoff y prime",
+      "Contraseñas y pagos, contigo"
+    ],
+    "takeaway": "Un límite real, no una solicitud de plazo.",
+    "source": "https://eventos.inema.pro/codex-claude/#juntos",
+    "speech": "Nivel cuatro: uso supervisado de la computadora. El asistente prepara la acción en una interfaz y se detiene antes de enviarla. Las contraseñas, los pagos y los envíos importantes quedan en tus manos. Nivel cinco: meta con condición de parada. Un objetivo con éxito observable, qué pruebas ejecutar, qué resultado obtener y límites de archivos, rondas y gasto. Pedir que se detenga en dos horas es una solicitud, no un límite. Nivel seis: handoff y prime. El handoff guarda el estado en un archivo portátil, y prime hace que el siguiente asistente lea y verifique ese estado antes de continuar."
+  },
+  {
+    "chapter": "Quién hace qué",
+    "title": "La tarjeta de rutas",
+    "kind": "compare",
+    "labels": [
+      "Planificar: Claude · Codex critica",
+      "Construir: Claude · Codex revisa el diff",
+      "Bug difícil: Codex con una meta",
+      "Cambiar de sesión: handoff + prime"
+    ],
+    "takeaway": "Son decisiones editoriales, no un ranking. Quédate con la ruta que dé mejores pruebas.",
+    "source": "https://eventos.inema.pro/codex-claude/#juntos",
+    "speech": "En la práctica, ¿quién hace qué? Para planificar, Claude escribe y Codex critica las premisas, hasta llegar a un plan con alcance y pruebas de aceptación. Para construir una función, Claude la construye y Codex revisa el diff. Para un bug difícil, Codex trabaja con una meta delimitada y un punto de control humano. Para revisar un documento, cualquiera puede escribir y el otro verifica los hechos. Y para cambiar de sesión o de modelo, handoff y prime. Atención: son decisiones editoriales, no un ranking medido. Prueba y quédate con la ruta que dé mejores pruebas."
+  },
+  {
+    "chapter": "Lo que aporta el video",
+    "title": "Tres formas de conectarlos",
+    "kind": "flow",
+    "labels": [
+      "Plugin codex-plugin-cc",
+      "Una CLI llama a la otra",
+      "Pull request revisado",
+      "/goal: usa un límite real"
+    ],
+    "takeaway": "El optimista planifica; el pesimista encuentra la falla. Con un límite de verdad.",
+    "source": "https://eventos.inema.pro/codex-claude/#video",
+    "speech": "El video de Mark Kashef presenta tres formas de conectar los dos. El plugin oficial de Codex para Claude Code. Una CLI llama a la otra y guarda la respuesta en un archivo Markdown: codex exec en modo de solo lectura, o claude menos p en el sentido inverso. Y un pull request que revisa el otro modelo. Según el autor, Claude es optimista y bueno para planificar, y Codex es pesimista y bueno para encontrar fallas. Una advertencia: el comando goal de Codex persigue la meta de forma exhaustiva, con tres a cinco veces más tiempo y tokens. Usa un límite de verdad: timeout, presupuesto, número de rondas."
+  },
+  {
+    "chapter": "Cómo se integra todo",
+    "title": "Entender, migrar, trabajar juntos, automatizar",
+    "kind": "flow",
+    "labels": [
+      "Entender",
+      "Migrar o mantener la compatibilidad",
+      "Usar los dos juntos",
+      "Automatizar el debate"
+    ],
+    "takeaway": "El vínculo común: los archivos Markdown del proyecto.",
+    "source": "https://eventos.inema.pro/codex-claude/#integracao",
+    "speech": "Los cursos y proyectos de INEMA sobre las dos herramientas no son piezas aisladas. Forman un recorrido. Primero, entender con el curso Claude para Codex, Codex Básico, Master Codex y Codex Cheat Sheet. Después, migrar o mantener la compatibilidad con el kit agente claude codex. Luego, usar los dos juntos con Use Both. Y, por último, automatizar el debate con claudex. El vínculo común son los archivos Markdown del proyecto: AGENTS punto md, tareas y handoffs, que cualquier runtime puede leer."
+  },
+  {
+    "chapter": "Cómo se integra todo",
+    "title": "claudex × Use Both",
+    "kind": "compare",
+    "labels": [
+      "claudex: software",
+      "Debate automático hasta LGTM",
+      "Use Both: método",
+      "6 flujos, como máximo 2 rondas"
+    ],
+    "takeaway": "Plan grande: claudex. Para lo demás: Use Both.",
+    "source": "https://eventos.inema.pro/codex-claude/#integracao",
+    "speech": "¿Y cuál es la diferencia entre claudex y Use Both? claudex es software, un plugin de Claude Code: Claude escribe el PLAN punto md, Codex critica desde tres ángulos, en un ciclo, hasta aprobarlo o llegar al número de rondas que definas. Tiene estado y rollback. Use Both es un método: guía, prompts, plantillas y las dos skills, que cubren los seis flujos. Se complementan. Para un plan grande, claudex. Para lo demás —revisar un diff, una meta con parada, cambiar de sesión—, Use Both."
+  },
+  {
+    "chapter": "Un caso real",
+    "title": "Imágenes con Codex en INEMA",
+    "kind": "compare",
+    "labels": [
+      "codex exec + image_gen",
+      "Portadas, banners, escenas",
+      "Alternativa FLUX.2 klein",
+      "Verificar antes, inspeccionar después"
+    ],
+    "takeaway": "En lote y de forma automática, con alternativa local y verificación del kit.",
+    "source": "https://eventos.inema.pro/codex-claude/#integracao",
+    "speech": "Un caso real. En INEMA, Claude Code llama a Codex en modo no interactivo y le pide a su generador de imágenes un archivo PNG en una carpeta. Así se crean las portadas del catálogo, los banners de las guías con texto correcto en portugués y las escenas de los cursos. Si Codex falla, pasa automáticamente a FLUX punto 2 klein local. Del kit adoptamos tres hábitos: verificar la herramienta y el costo antes de generar, inspeccionar la imagen en su tamaño real y guardar versiones hermanas en vez de sobrescribir."
+  },
+  {
+    "chapter": "Recursos",
+    "title": "Todo lo que tienes, abierto",
+    "kind": "steps",
+    "labels": [
+      "6 cursos: Claude → Codex, Codex Básico, Master Codex, iClaudeX, MakeClaudeX, DeepClaudeX",
+      "Kits: agente-claude-codex, Use Both",
+      "CLI claudex",
+      "Codex Cheat Sheet"
+    ],
+    "takeaway": "Desde el primer comando en Codex CLI hasta orquestar varios modelos.",
+    "source": "https://eventos.inema.pro/codex-claude/#projetos",
+    "speech": "Y esto es lo que tienes a tu disposición, todo abierto. Seis cursos: Claude para Codex, en portugués, inglés y español; Codex Básico, el curso completo de Codex CLI; Master Codex, la fábrica de SaaS con agentes; iClaudeX, planificación con Claude y Codex en la terminal; MakeClaudeX, del prompt al plugin de producción; y DeepClaudeX, multimodelo setenta, veinte, diez. Y los kits: agente claude codex, para migrar o mantener la compatibilidad; Use Both, con los seis niveles; la CLI claudex; y Codex Cheat Sheet, la referencia rápida. Todo con repositorio en GitHub."
+  },
+  {
+    "chapter": "Empieza ahora",
+    "title": "Un plan tuyo, revisado por el otro",
+    "kind": "steps",
+    "labels": [
+      "Una tarea pequeña",
+      "Briefing + criterio de aceptación",
+      "El plan de uno, la crítica del otro",
+      "Handoff antes de cerrar"
+    ],
+    "takeaway": "eventos.inema.pro/codex-claude",
+    "source": "https://eventos.inema.pro/codex-claude/#comece",
+    "speech": "¿Por dónde empezar? Elige una tarea pequeña. Escribe el briefing y el criterio de aceptación. Pídele el plan a uno y la crítica al otro, sobre el mismo archivo, como máximo en dos rondas. Y, antes de cerrar la sesión, haz el handoff. Todo esto está en la sección Codex más Claude, en eventos punto inema punto pro, barra codex claude, en portugués, inglés y español. Contenido abierto de INEMA punto CLUB."
+  }
+]

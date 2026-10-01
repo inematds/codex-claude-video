@@ -2,7 +2,9 @@
 
 Vídeo explicativo, com avatar e voz do Nei, da área **[Codex + Claude · usar os dois juntos e todos os projetos](https://eventos.inema.pro/codex-claude/)** do INEMA: os seis níveis do kit Use Both, quem faz o quê, as três formas de ligar Claude e Codex, como os cursos e kits do INEMA se integram e todos os recursos abertos sobre o tema.
 
-**[▶ Assistir](https://inematds.github.io/codex-claude-video/videos/)**
+**[▶ Assistir](https://inematds.github.io/codex-claude-video/videos/)** · [▶ English](https://inematds.github.io/codex-claude-video/videos/en/) · [▶ Español](https://inematds.github.io/codex-claude-video/videos/es/)
+
+As versões em inglês e espanhol têm avatar e voz do Nei no idioma, com animações e legendas traduzidas. Foram geradas pelo estúdio do HeyGen (assinatura), sem API, a partir de `roteiro/en.json` e `roteiro/es.json`.
 
 | Versão | Formato | Para quê |
 |---|---|---|

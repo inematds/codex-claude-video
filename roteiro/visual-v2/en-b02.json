@@ -1,0 +1,510 @@
+{
+  "block": "en-b02",
+  "scenes": {
+    "6": {
+      "takeaway": "Optimistic plans, pessimistic finds the flaw — with a **real limit**.",
+      "shots": [
+        {
+          "type": "bullets",
+          "at": "Mark Kashef’s video shows",
+          "title": "3 WAYS TO CONNECT THE TWO",
+          "layout": "column",
+          "items": [
+            {
+              "text": "**Official plugin** for Codex in Claude Code",
+              "icon": "link",
+              "at": "The official Codex plugin"
+            },
+            {
+              "text": "One **CLI** calls the other → response saved to **.md**",
+              "icon": "terminal",
+              "at": "One CLI calling the other"
+            },
+            {
+              "text": "**Pull request** reviewed by the other model",
+              "icon": "git",
+              "at": "And a pull request"
+            }
+          ]
+        },
+        {
+          "type": "terminal",
+          "at": "with the response saved to",
+          "title": "CLAUDE ⇄ CODEX, READ ONLY",
+          "lines": [
+            {
+              "type": "comment",
+              "text": "# Claude → Codex",
+              "at": "with the response saved to"
+            },
+            {
+              "type": "cmd",
+              "text": "codex exec --sandbox read-only --output-last-message review.md '...'",
+              "at": "in read-only mode"
+            },
+            {
+              "type": "comment",
+              "text": "# Codex → Claude",
+              "at": "the other way around"
+            },
+            {
+              "type": "cmd",
+              "text": "claude -p --model opus '...' > review-claude.md",
+              "at": "the other way around"
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "at": "In the author’s view",
+          "left": {
+            "title": "CLAUDE · OPTIMISTIC",
+            "at": "Claude is optimistic",
+            "tone": "neutral",
+            "lines": [
+              {
+                "text": "good at **planning**",
+                "at": "good at planning"
+              }
+            ]
+          },
+          "right": {
+            "title": "CODEX · PESSIMISTIC",
+            "at": "Codex is pessimistic",
+            "tone": "good",
+            "lines": [
+              {
+                "text": "good at **finding flaws**",
+                "at": "good at finding flaws"
+              }
+            ]
+          }
+        },
+        {
+          "type": "counter",
+          "at": "One warning",
+          "items": [
+            {
+              "value": 5,
+              "prefix": "3–",
+              "suffix": "×",
+              "label": "more time and tokens with Codex’s /goal",
+              "at": "three to five times"
+            }
+          ]
+        },
+        {
+          "type": "bullets",
+          "at": "Set a real limit",
+          "title": "A REAL LIMIT",
+          "layout": "row",
+          "items": [
+            {
+              "text": "**timeout**",
+              "icon": "clock",
+              "at": "a timeout"
+            },
+            {
+              "text": "**budget**",
+              "icon": "money",
+              "at": "a budget"
+            },
+            {
+              "text": "**number of rounds**",
+              "icon": "refresh",
+              "at": "a number of rounds"
+            }
+          ]
+        }
+      ]
+    },
+    "7": {
+      "takeaway": "The common thread: the project’s **Markdown files**.",
+      "shots": [
+        {
+          "type": "statement",
+          "at": "INEMA’s courses and projects",
+          "text": "~~separate pieces~~ → **a path**",
+          "strike_at": "aren’t separate pieces",
+          "then": {
+            "at": "They form a path",
+            "text": "A **path** in 4 steps"
+          }
+        },
+        {
+          "type": "timeline",
+          "at": "First, understand",
+          "events": [
+            {
+              "label": "Understand",
+              "sub": "Claude → Codex · Codex Básico · Master Codex · Cheat Sheet",
+              "at": "First, understand"
+            },
+            {
+              "label": "Migrate or stay agnostic",
+              "sub": "agente claude codex kit",
+              "at": "Then migrate"
+            },
+            {
+              "label": "Use both together",
+              "sub": "Use Both",
+              "at": "Next, use both"
+            },
+            {
+              "label": "Automate the debate",
+              "sub": "claudex",
+              "at": "automate the debate"
+            }
+          ]
+        },
+        {
+          "type": "filetree",
+          "at": "The common thread",
+          "root": "your-project/",
+          "entries": [
+            {
+              "path": "AGENTS.md",
+              "at": "AGENTS dot md",
+              "note": "instructions"
+            },
+            {
+              "path": "tasks/",
+              "kind": "dir",
+              "at": "tasks",
+              "note": "tasks"
+            },
+            {
+              "path": "handoffs/",
+              "kind": "dir",
+              "at": "and handoffs",
+              "note": "portable state"
+            },
+            {
+              "path": "→ any runtime can read",
+              "at": "any runtime can read"
+            }
+          ]
+        }
+      ]
+    },
+    "8": {
+      "takeaway": "Big plan: **claudex**. Everything else: **Use Both**.",
+      "shots": [
+        {
+          "type": "compare",
+          "at": "So what’s the difference",
+          "left": {
+            "title": "CLAUDEX · SOFTWARE",
+            "at": "claudex is software",
+            "tone": "neutral",
+            "lines": [
+              {
+                "text": "a **Claude Code** plugin",
+                "at": "a Claude Code plugin"
+              },
+              {
+                "text": "Claude writes **PLAN.md**",
+                "at": "Claude writes PLAN dot md"
+              },
+              {
+                "text": "Codex critiques from **3 angles**, in a loop",
+                "at": "critiques it from three angles"
+              },
+              {
+                "text": "status and **rollback**",
+                "at": "It has status"
+              }
+            ]
+          },
+          "right": {
+            "title": "USE BOTH · METHOD",
+            "at": "Use Both is a method",
+            "tone": "good",
+            "lines": [
+              {
+                "text": "guide, prompts, templates",
+                "at": "a guide, prompts"
+              },
+              {
+                "text": "**handoff** and **prime** skills",
+                "at": "the two skills"
+              },
+              {
+                "text": "**6 workflows**",
+                "at": "covering all six workflows"
+              }
+            ]
+          },
+          "verdict": {
+            "text": "They **complement** each other",
+            "at": "They complement each other"
+          }
+        },
+        {
+          "type": "lanes",
+          "at": "For a big plan",
+          "lanes": [
+            {
+              "title": "CLAUDEX",
+              "sub": "automated debate",
+              "icon": "bot"
+            },
+            {
+              "title": "USE BOTH",
+              "sub": "everything else",
+              "icon": "box"
+            }
+          ],
+          "items": [
+            {
+              "lane": 0,
+              "text": "**Big plan**",
+              "at": "For a big plan"
+            },
+            {
+              "lane": 1,
+              "text": "Review a **diff**",
+              "at": "else—reviewing a diff"
+            },
+            {
+              "lane": 1,
+              "text": "A goal with a **stopping condition**",
+              "at": "a goal with a stopping condition"
+            },
+            {
+              "lane": 1,
+              "text": "Switch **sessions**",
+              "at": "switching sessions—use"
+            }
+          ]
+        }
+      ]
+    },
+    "9": {
+      "takeaway": "Check **before**, inspect **after**, save **sibling versions**.",
+      "shots": [
+        {
+          "type": "pipeline",
+          "at": "A real example",
+          "input": {
+            "title": "CLAUDE CODE",
+            "files": [
+              "codex exec",
+              "non-interactive mode"
+            ],
+            "at": "Claude Code calls Codex"
+          },
+          "core": {
+            "label": "Codex · image_gen",
+            "at": "its image generator"
+          },
+          "output": {
+            "title": "FILE",
+            "tokens": [
+              "cover.png"
+            ],
+            "at": "a PNG file"
+          }
+        },
+        {
+          "type": "bullets",
+          "at": "That’s how",
+          "title": "WHERE WE USE IT",
+          "layout": "row",
+          "items": [
+            {
+              "text": "**Catalog covers**",
+              "icon": "image",
+              "at": "catalog covers"
+            },
+            {
+              "text": "**Guide banners** with correct Portuguese text",
+              "icon": "flag",
+              "at": "guide banners"
+            },
+            {
+              "text": "**Course scenes**",
+              "icon": "video",
+              "at": "course scenes"
+            }
+          ]
+        },
+        {
+          "type": "flow",
+          "at": "If Codex fails",
+          "nodes": [
+            {
+              "id": "c",
+              "label": "Codex failed?",
+              "icon": "warn",
+              "col": 0,
+              "row": 1,
+              "at": "If Codex fails"
+            },
+            {
+              "id": "f",
+              "label": "local FLUX.2 klein",
+              "icon": "cpu",
+              "col": 3,
+              "row": 1,
+              "at": "falls back automatically"
+            }
+          ],
+          "edges": [
+            {
+              "from": "c",
+              "to": "f",
+              "at": "falls back automatically",
+              "label": "fallback"
+            }
+          ]
+        },
+        {
+          "type": "steps",
+          "at": "We took three habits",
+          "goal": "3 HABITS FROM THE KIT",
+          "steps": [
+            {
+              "title": "Check the tool and **cost** before generating",
+              "at": "check the tool and cost"
+            },
+            {
+              "title": "Inspect at **real size**",
+              "at": "inspect the image at"
+            },
+            {
+              "title": "Save **sibling versions**",
+              "at": "save sibling versions"
+            }
+          ]
+        }
+      ]
+    },
+    "10": {
+      "takeaway": "From the first Codex CLI command to **orchestrating multiple models**.",
+      "shots": [
+        {
+          "type": "keyword",
+          "at": "And here’s everything",
+          "text": "Everything **open**",
+          "sub": "courses · kits · references",
+          "sub_at": "all open"
+        },
+        {
+          "type": "bullets",
+          "at": "Six courses",
+          "title": "6 COURSES",
+          "layout": "column",
+          "items": [
+            {
+              "text": "**Claude → Codex** · PT · EN · ES",
+              "icon": "book",
+              "at": "Claude para Codex"
+            },
+            {
+              "text": "**Codex Básico** · complete Codex CLI course",
+              "icon": "terminal",
+              "at": "Codex Básico"
+            },
+            {
+              "text": "**Master Codex** · SaaS factory with agents",
+              "icon": "gear",
+              "at": "Master Codex"
+            },
+            {
+              "text": "**iClaudeX** · planning in the terminal",
+              "icon": "bulb",
+              "at": "planning with Claude"
+            },
+            {
+              "text": "**MakeClaudeX** · from prompt to production plugin",
+              "icon": "code",
+              "at": "from prompt to production"
+            },
+            {
+              "text": "**DeepClaudeX** · multi-model 70/20/10",
+              "icon": "cpu",
+              "at": "multi model"
+            }
+          ]
+        },
+        {
+          "type": "hub",
+          "at": "Plus the kits",
+          "center": {
+            "label": "Kits and references",
+            "icon": "box",
+            "at": "Plus the kits"
+          },
+          "nodes": [
+            {
+              "label": "agente claude codex",
+              "sub": "migrate or stay agnostic",
+              "icon": "refresh",
+              "at": "to migrate"
+            },
+            {
+              "label": "Use Both",
+              "sub": "the six levels",
+              "icon": "list",
+              "at": "with the six levels"
+            },
+            {
+              "label": "claudex",
+              "sub": "debate CLI",
+              "icon": "terminal",
+              "at": "the claudex CLI"
+            },
+            {
+              "label": "Codex Cheat Sheet",
+              "sub": "quick reference",
+              "icon": "doc",
+              "at": "the quick reference"
+            },
+            {
+              "label": "GitHub",
+              "sub": "everything has a repository",
+              "icon": "git",
+              "at": "Everything has a GitHub repository"
+            }
+          ]
+        }
+      ]
+    },
+    "11": {
+      "takeaway": "eventos.inema.pro/**codex-claude**",
+      "shots": [
+        {
+          "type": "steps",
+          "at": "Where should you start",
+          "goal": "START NOW",
+          "steps": [
+            {
+              "title": "A **small task**",
+              "at": "Choose a small task"
+            },
+            {
+              "title": "**Brief** + acceptance criteria",
+              "at": "Write the brief"
+            },
+            {
+              "title": "One plans, the **other critiques**",
+              "at": "Ask one to make the plan"
+            },
+            {
+              "title": "**Handoff** before ending",
+              "at": "Before ending the session"
+            }
+          ]
+        },
+        {
+          "type": "keyword",
+          "at": "You’ll find all this",
+          "text": "eventos.inema.pro/**codex-claude**",
+          "sub": "PT · EN · ES · open content from INEMA.CLUB",
+          "sub_at": "in Portuguese"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,476 @@
+{
+  "block": "en-b01",
+  "scenes": {
+    "1": {
+      "takeaway": "It’s not Claude **or** Codex. It’s one **building** and the other **checking**.",
+      "shots": [
+        {
+          "type": "chat",
+          "at": "You ask AI",
+          "title": "THE SAME AI, REVIEWING ITSELF",
+          "messages": [
+            {
+              "role": "user",
+              "text": "Write the plan.",
+              "at": "You ask AI"
+            },
+            {
+              "role": "user",
+              "text": "Now review your own plan.",
+              "at": "review its own work"
+            },
+            {
+              "role": "ai",
+              "text": "It looks great. **Approved.**",
+              "at": "It approves"
+            },
+            {
+              "role": "note",
+              "text": "Every time.",
+              "at": "Every time"
+            }
+          ]
+        },
+        {
+          "type": "statement",
+          "at": "The model that wrote",
+          "text": "Self-review → ~~everything is fine~~",
+          "strike_at": "everything is fine",
+          "then": {
+            "at": "the solution is simple",
+            "text": "One **plans**, the other **critiques**"
+          }
+        },
+        {
+          "type": "compare",
+          "at": "Claude and Codex complement",
+          "left": {
+            "title": "CLAUDE",
+            "at": "Claude and Codex",
+            "tone": "neutral",
+            "lines": [
+              {
+                "text": "handles one part",
+                "at": "each handles one part"
+              }
+            ]
+          },
+          "right": {
+            "title": "CODEX",
+            "at": "the other checks",
+            "tone": "good",
+            "lines": [
+              {
+                "text": "checks the **actual artifact**",
+                "at": "actual artifact"
+              }
+            ]
+          },
+          "verdict": {
+            "text": "Both **together**",
+            "at": "use them together"
+          }
+        },
+        {
+          "type": "bullets",
+          "at": "everything INEMA already",
+          "title": "READY AT INEMA",
+          "layout": "row",
+          "items": [
+            {
+              "text": "**Courses**",
+              "icon": "book",
+              "at": "courses"
+            },
+            {
+              "text": "**Kits**",
+              "icon": "box",
+              "at": "kits"
+            },
+            {
+              "text": "**Tools**",
+              "icon": "gear",
+              "at": "tools"
+            },
+            {
+              "text": "All **open**",
+              "icon": "globe",
+              "at": "all open"
+            }
+          ]
+        }
+      ]
+    },
+    "2": {
+      "takeaway": "The second gets the **same brief** and the **real artifact**.",
+      "shots": [
+        {
+          "type": "keyword",
+          "at": "The foundation is",
+          "text": "**Use Both**",
+          "sub": "Claude + Codex Workflow Kit · Mark Kashef · MIT",
+          "sub_at": "Mark Kashef’s Use Both kit"
+        },
+        {
+          "type": "hub",
+          "at": "It organizes work",
+          "center": {
+            "label": "Use Both",
+            "icon": "box",
+            "at": "It organizes work"
+          },
+          "nodes": [
+            {
+              "label": "6 levels",
+              "icon": "list",
+              "at": "across six levels"
+            },
+            {
+              "label": "Ready-to-use prompts",
+              "icon": "doc",
+              "at": "with ready-to-use prompts"
+            },
+            {
+              "label": "Skill handoff",
+              "icon": "upload",
+              "at": "handoff and prime"
+            },
+            {
+              "label": "Skill prime",
+              "icon": "download",
+              "at": "handoff and prime"
+            },
+            {
+              "label": "Switch assistants",
+              "icon": "refresh",
+              "at": "switch assistants"
+            }
+          ]
+        },
+        {
+          "type": "statement",
+          "at": "And one rule applies",
+          "text": "THE RULE: **same brief** + **real artifact**"
+        },
+        {
+          "type": "compare",
+          "at": "The file, the diff",
+          "left": {
+            "title": "NEVER",
+            "at": "Never a vague summary",
+            "tone": "bad",
+            "lines": [
+              {
+                "text": "a vague summary of what the first one did",
+                "at": "vague summary"
+              }
+            ]
+          },
+          "right": {
+            "title": "ALWAYS",
+            "at": "The file, the diff",
+            "tone": "good",
+            "lines": [
+              {
+                "text": "the **file**",
+                "at": "The file"
+              },
+              {
+                "text": "the **diff**",
+                "at": "the diff"
+              },
+              {
+                "text": "the **image**",
+                "at": "the image"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "3": {
+      "takeaway": "Tests and **your approval** decide what goes in.",
+      "shots": [
+        {
+          "type": "chat",
+          "at": "Level one",
+          "title": "LEVEL 1 · LET THEM DISCUSS",
+          "messages": [
+            {
+              "role": "user",
+              "text": "Claude: write the **plan**",
+              "at": "One writes the plan"
+            },
+            {
+              "role": "ai",
+              "text": "Codex: critiques the same file, **read-only**",
+              "at": "the other critiques"
+            },
+            {
+              "role": "note",
+              "text": "evidence + severity",
+              "at": "with evidence and severity"
+            },
+            {
+              "role": "note",
+              "text": "max. **2 rounds**",
+              "at": "At most two rounds"
+            }
+          ]
+        },
+        {
+          "type": "statement",
+          "at": "because two AIs agreeing",
+          "text": "Two AIs agreeing = ~~proof~~",
+          "strike_at": "isn’t proof"
+        },
+        {
+          "type": "fields",
+          "at": "Level two",
+          "title": "LEVEL 2 · GENERATE IMAGES (OPTIONAL)",
+          "fields": [
+            {
+              "label": "Condition",
+              "value": "image tool in the session",
+              "at": "if there’s an image tool"
+            },
+            {
+              "label": "Done",
+              "value": "the **real file**",
+              "at": "Done means"
+            },
+            {
+              "label": "Check",
+              "value": "at its intended size",
+              "at": "at its intended size"
+            }
+          ]
+        },
+        {
+          "type": "flow",
+          "at": "Level three",
+          "nodes": [
+            {
+              "id": "b",
+              "label": "Builds on a branch",
+              "icon": "code",
+              "col": 0,
+              "row": 1,
+              "at": "One builds on a branch"
+            },
+            {
+              "id": "r",
+              "label": "Reviews the diff",
+              "icon": "eye",
+              "col": 2,
+              "row": 1,
+              "at": "the other reviews"
+            },
+            {
+              "id": "t",
+              "label": "Tests + you",
+              "icon": "check",
+              "col": 4,
+              "row": 1,
+              "at": "The tests and you"
+            }
+          ],
+          "edges": [
+            {
+              "from": "b",
+              "to": "r",
+              "at": "the other reviews",
+              "label": "diff"
+            },
+            {
+              "from": "r",
+              "to": "t",
+              "at": "The tests and you",
+              "label": "decide"
+            }
+          ]
+        }
+      ]
+    },
+    "4": {
+      "takeaway": "A goal needs a **real limit**, not a time request.",
+      "shots": [
+        {
+          "type": "steps",
+          "at": "Level four",
+          "goal": "LEVEL 4 · SUPERVISED COMPUTER USE",
+          "steps": [
+            {
+              "title": "Prepares the action",
+              "at": "The assistant prepares"
+            },
+            {
+              "title": "Stops before submitting",
+              "at": "stops before submitting it"
+            },
+            {
+              "title": "Password and payment: **you**",
+              "at": "Passwords, payments"
+            }
+          ]
+        },
+        {
+          "type": "fields",
+          "at": "Level five",
+          "title": "LEVEL 5 · A GOAL WITH A STOPPING CONDITION",
+          "fields": [
+            {
+              "label": "Success",
+              "value": "observable",
+              "at": "observable success"
+            },
+            {
+              "label": "Proof",
+              "value": "which tests, what output",
+              "at": "which tests to run"
+            },
+            {
+              "label": "Limits",
+              "value": "files · rounds · spend",
+              "at": "limits on files"
+            }
+          ],
+          "stamp": {
+            "text": "REAL LIMIT",
+            "at": "and spend"
+          }
+        },
+        {
+          "type": "statement",
+          "at": "Asking it to stop",
+          "text": "\"Stop in 2 hours\" = ~~a limit~~",
+          "strike_at": "not a limit",
+          "then": {
+            "at": "Level six",
+            "text": "**Level 6** · handoff and prime"
+          }
+        },
+        {
+          "type": "flow",
+          "at": "Handoff saves the state",
+          "nodes": [
+            {
+              "id": "a",
+              "label": "Assistant A",
+              "icon": "bot",
+              "col": 0,
+              "row": 1,
+              "at": "Handoff saves the state"
+            },
+            {
+              "id": "f",
+              "label": "handoff.md",
+              "icon": "doc",
+              "col": 2,
+              "row": 1,
+              "at": "in a portable file"
+            },
+            {
+              "id": "b",
+              "label": "Assistant B",
+              "icon": "bot",
+              "col": 4,
+              "row": 1,
+              "at": "the next assistant"
+            }
+          ],
+          "edges": [
+            {
+              "from": "a",
+              "to": "f",
+              "at": "in a portable file",
+              "label": "handoff"
+            },
+            {
+              "from": "f",
+              "to": "b",
+              "at": "read and verify that state",
+              "label": "prime"
+            }
+          ]
+        }
+      ]
+    },
+    "5": {
+      "takeaway": "Editorial choices, not a ranking. Stick with the route that gives you the **best evidence**.",
+      "shots": [
+        {
+          "type": "lanes",
+          "at": "In practice, who does what",
+          "lanes": [
+            {
+              "title": "CLAUDE",
+              "sub": "first pass",
+              "icon": "pencil"
+            },
+            {
+              "title": "CODEX",
+              "sub": "second pass",
+              "icon": "search"
+            }
+          ],
+          "items": [
+            {
+              "lane": 0,
+              "text": "**Plan**",
+              "at": "Claude writes"
+            },
+            {
+              "lane": 1,
+              "text": "critiques the **assumptions**",
+              "at": "Codex critiques"
+            },
+            {
+              "lane": 0,
+              "text": "**Build** the feature",
+              "at": "Claude builds"
+            },
+            {
+              "lane": 1,
+              "text": "reviews the **diff**",
+              "at": "Codex reviews"
+            },
+            {
+              "lane": 1,
+              "text": "**Tough bug** with a goal",
+              "at": "For a tough bug"
+            }
+          ]
+        },
+        {
+          "type": "bullets",
+          "at": "To review a document",
+          "title": "AND MORE",
+          "layout": "column",
+          "items": [
+            {
+              "text": "**Document:** one writes, the other checks the facts",
+              "icon": "doc",
+              "at": "To review a document"
+            },
+            {
+              "text": "**Switch sessions:** handoff + prime",
+              "icon": "refresh",
+              "at": "switch sessions"
+            }
+          ]
+        },
+        {
+          "type": "statement",
+          "at": "One note: these are editorial choices",
+          "text": "~~measured ranking~~ → **editorial choices**",
+          "strike_at": "not a measured ranking",
+          "then": {
+            "at": "Test them and stick",
+            "text": "Test them. Stick with the **best evidence**."
+          }
+        }
+      ]
+    }
+  }
+}
