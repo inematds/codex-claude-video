@@ -1,0 +1,17 @@
+{
+  "completo": {
+    "url": "https://github.com/inematds/codex-claude-video/releases/download/video-v2.0.0/codex-claude-completo-16x9-en.mp4",
+    "srt": "https://github.com/inematds/codex-claude-video/releases/download/video-v2.0.0/codex-claude-completo-16x9-en.srt",
+    "duration": 398.94
+  },
+  "essencial": {
+    "url": "https://github.com/inematds/codex-claude-video/releases/download/video-v2.0.0/codex-claude-essencial-16x9-en.mp4",
+    "srt": "https://github.com/inematds/codex-claude-video/releases/download/video-v2.0.0/codex-claude-essencial-16x9-en.srt",
+    "duration": 214.36
+  },
+  "reel": {
+    "url": "https://github.com/inematds/codex-claude-video/releases/download/video-v2.0.0/codex-claude-reel-9x16-en.mp4",
+    "srt": "https://github.com/inematds/codex-claude-video/releases/download/video-v2.0.0/codex-claude-reel-9x16-en.srt",
+    "duration": 93.24
+  }
+}

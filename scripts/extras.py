@@ -2,16 +2,28 @@
 - essencial 16:9: cenas 1-4 + 10-11 cortadas do vídeo completo v2, legendas deslocadas;
 - reel 9:16: cenas 1, 2 e 11 — manchete no topo, avatar no meio (legenda na altura do peito),
   animação v2 recortada (sem o canto do avatar nem a legenda de baixo) na base.
-Corta nas divisas de cena medidas (align/*.json). Tudo local, ffmpeg."""
-import json, re, subprocess
+Corta nas divisas de cena medidas (align/*.json). Tudo local, ffmpeg.
+Idioma: EXTRAS_LANG=pt|en|es (padrão pt). EN/ES leem <lang>-v1/<lang>-v2 e saem com sufixo -<lang>."""
+import json, os, re, subprocess
 from pathlib import Path
 
+LANG = os.environ.get('EXTRAS_LANG', 'pt')
 OUT = Path.home() / 'projetos/output/codex-claude-video'
-V1, V2 = OUT / 'v1', OUT / 'v2'
-FULL = V2 / 'final/codex-claude-pt.mp4'
-B1 = json.loads((V2 / 'align/pt-b01.json').read_text())['starts']
-B2 = json.loads((V2 / 'align/pt-b02.json').read_text())['starts']
-D1 = float(json.loads((V2 / 'verification/blocos-downloads.json').read_text())['pt-b01']['duration'])
+V1, V2 = (OUT / 'v1', OUT / 'v2') if LANG == 'pt' else (OUT / f'{LANG}-v1', OUT / f'{LANG}-v2')
+SUF = '' if LANG == 'pt' else f'-{LANG}'
+FULL = V2 / f'final/codex-claude-{LANG}.mp4'
+B1 = json.loads((V2 / f'align/{LANG}-b01.json').read_text())['starts']
+B2 = json.loads((V2 / f'align/{LANG}-b02.json').read_text())['starts']
+D1 = float(json.loads((V2 / 'verification/blocos-downloads.json').read_text())[f'{LANG}-b01']['duration'])
+# Textos do reel por idioma: kicker, manchetes (a 2ª entra na deixa `virada`), CTA
+TXT = {
+    'pt': dict(kicker='CLAUDE + CODEX · USAR OS DOIS JUNTOS', virada='um planeja', cta='Saiba mais no inema.club',
+               heads=['A IA aprova{N}o próprio plano.', 'Um planeja.{N}O outro critica.', 'Mesmo briefing.{N}Artefato real.', 'Comece hoje.{N}Duas rodadas.']),
+    'en': dict(kicker='CLAUDE + CODEX · USING BOTH TOGETHER', virada='one plans', cta='Learn more at inema.club',
+               heads=['AI approves{N}its own plan.', 'One plans.{N}The other critiques.', 'Same brief.{N}Real artifact.', 'Start today.{N}Two rounds.']),
+    'es': dict(kicker='CLAUDE + CODEX · USAR LOS DOS JUNTOS', virada='uno planifica', cta='Más información en inema.club',
+               heads=['La IA aprueba{N}su propio plan.', 'Uno planifica.{N}El otro critica.', 'Mismo briefing.{N}Resultado real.', 'Empieza hoy.{N}Dos rondas.']),
+}[LANG]
 
 
 def ts(s):
@@ -55,10 +67,10 @@ def trimcat(segs, src_idx=0, audio=True):
 
 def essencial():
     segs = [(0, B1[4]), (D1 + B2[4], D1 + B2[6])]
-    dest = OUT / 'final/codex-claude-essencial-16x9.mp4'; dest.parent.mkdir(exist_ok=True)
+    dest = OUT / f'final/codex-claude-essencial-16x9{SUF}.mp4'; dest.parent.mkdir(exist_ok=True)
     ff('-i', str(FULL), '-filter_complex', trimcat(segs), '-map', '[v]', '-map', '[a]', '-c:v', 'libx264', '-crf', '20', '-preset', 'medium',
        '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '160k', '-movflags', '+faststart', str(dest))
-    c = cut_cues(V2 / 'final/codex-claude-pt.srt', segs)
+    c = cut_cues(V2 / f'final/codex-claude-{LANG}.srt', segs)
     dest.with_suffix('.srt').write_text('\n'.join(f'{i + 1}\n{st(s)} --> {st(e)}\n{t}\n' for i, (s, e, t) in enumerate(c)))
     return dest
 
@@ -91,27 +103,25 @@ def reel():
     seg2 = (B2[5], B2[6])                          # cena 11 (bloco 2)
     total = sum(b - a for a, b in segs1) + seg2[1] - seg2[0]
     t2, t3 = B1[1], B1[2]
-    heads = [  # (início, fim, texto) — o frame 0 já é a capa
-        (0, 12.2, f'A IA aprova{{\\N}}{AMB}o próprio plano.'),
-        (12.2, t2, f'Um planeja.{{\\N}}{AMB}O outro critica.'),
-        (t2, t3, f'Mesmo briefing.{{\\N}}{AMB}Artefato real.'),
-        (t3, total - 5, f'Comece hoje.{{\\N}}{AMB}Duas rodadas.'),
-    ]
-    ev = [f'Dialogue: 0,{ass_t(0)},{ass_t(total)},Kicker,,0,0,0,,CLAUDE + CODEX · USAR OS DOIS JUNTOS']
+    # 2ª manchete na deixa falada (PT medido em 12,2 s; EN/ES lidos da legenda do bloco 1)
+    vira = 12.2 if LANG == 'pt' else next(s for s, e, t in cues(V2 / f'final/{LANG}-b01/captions.srt') if TXT['virada'] in t.lower())
+    h = [x.replace('{N}', '{\\N}' + AMB) for x in TXT['heads']]
+    heads = [(0, vira, h[0]), (vira, t2, h[1]), (t2, t3, h[2]), (t3, total - 5, h[3])]  # o frame 0 já é a capa
+    ev = [f'Dialogue: 0,{ass_t(0)},{ass_t(total)},Kicker,,0,0,0,,{TXT["kicker"]}']
     for a, b, t in heads:
         fade = r'{\fad(0,180)}' if a == 0 else r'{\fad(220,180)\move(540,230,540,190,0,260)}'
         ev.append(f'Dialogue: 0,{ass_t(a)},{ass_t(b)},Head,,0,0,0,,{fade}{t.replace("{\\N}", chr(92) + "N")}')
     ev.append(f'Dialogue: 0,{ass_t(total - 5)},{ass_t(total)},Head,,0,0,0,,{{\\fad(220,0)}}eventos.inema.pro\\N{AMB}/codex-claude')
-    ev.append(f'Dialogue: 1,{ass_t(total - 5)},{ass_t(total)},Cta,,0,0,0,,{{\\fad(220,0)}}Saiba mais no inema.club')
-    caps = cut_cues(V2 / 'final/pt-b01/captions.srt', segs1)
+    ev.append(f'Dialogue: 1,{ass_t(total - 5)},{ass_t(total)},Cta,,0,0,0,,{{\\fad(220,0)}}{TXT["cta"]}')
+    caps = cut_cues(V2 / f'final/{LANG}-b01/captions.srt', segs1)
     off = sum(b - a for a, b in segs1)
-    caps += [(off + s - seg2[0], off + min(e, seg2[1]) - seg2[0], t) for s, e, t in cues(V2 / 'final/pt-b02/captions.srt') if seg2[0] - .05 <= s < seg2[1] - .05]
+    caps += [(off + s - seg2[0], off + min(e, seg2[1]) - seg2[0], t) for s, e, t in cues(V2 / f'final/{LANG}-b02/captions.srt') if seg2[0] - .05 <= s < seg2[1] - .05]
     for s, e, t in caps:
         ev.append(f'Dialogue: 2,{ass_t(s)},{ass_t(e)},Cap,,0,0,0,,{t}')
-    ass = OUT / 'final/reel.ass'; ass.write_text(ASS_HEAD + '\n'.join(ev) + '\n')
-    dest = OUT / 'final/codex-claude-reel-9x16.mp4'
-    av1, av2 = V1 / 'assets/nei-pt-b01.mp4', V1 / 'assets/nei-pt-b02.mp4'
-    ex1, ex2 = V2 / 'final/pt-b01.mp4', V2 / 'final/pt-b02.mp4'
+    ass = OUT / f'final/reel{SUF}.ass'; ass.write_text(ASS_HEAD + '\n'.join(ev) + '\n')
+    dest = OUT / f'final/codex-claude-reel-9x16{SUF}.mp4'
+    av1, av2 = V1 / f'assets/nei-{LANG}-b01.mp4', V1 / f'assets/nei-{LANG}-b02.mp4'
+    ex1, ex2 = V2 / f'final/{LANG}-b01.mp4', V2 / f'final/{LANG}-b02.mp4'
     (a1, b1), (a2, b2) = (0, B1[2]), seg2
     fc = (f'[0:v]trim={a1}:{b1},setpts=PTS-STARTPTS,fps=30[av1];[1:v]trim={a2}:{b2},setpts=PTS-STARTPTS,fps=30[av2];'
           f'[av1][av2]concat=n=2:v=1:a=0,scale=1080:608,setsar=1[av];'

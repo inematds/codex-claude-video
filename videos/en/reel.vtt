@@ -1,0 +1,209 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:01.420
+You ask AI for a plan,
+
+2
+00:00:01.420 --> 00:00:03.320
+then ask it to review its own
+
+3
+00:00:03.320 --> 00:00:04.420
+work.
+
+4
+00:00:04.420 --> 00:00:05.780
+It approves it.
+
+5
+00:00:05.780 --> 00:00:06.980
+Every time.
+
+6
+00:00:06.980 --> 00:00:08.640
+The model that wrote the plan,
+
+7
+00:00:08.640 --> 00:00:10.320
+especially in the same session,
+
+8
+00:00:10.320 --> 00:00:12.520
+tends to think everything is fine.
+
+9
+00:00:12.520 --> 00:00:13.460
+I’m Nei Maldaner,
+
+10
+00:00:13.460 --> 00:00:15.680
+and the solution is simple:
+
+11
+00:00:15.680 --> 00:00:18.580
+one plans, the other critiques.
+
+12
+00:00:18.580 --> 00:00:20.960
+Claude and Codex complement each other when
+
+13
+00:00:20.960 --> 00:00:23.180
+each handles one part and the other
+
+14
+00:00:23.180 --> 00:00:25.020
+checks the actual artifact.
+
+15
+00:00:25.020 --> 00:00:25.900
+In this video,
+
+16
+00:00:25.900 --> 00:00:27.540
+I’ll show you how to use them
+
+17
+00:00:27.540 --> 00:00:31.400
+together and everything INEMA already has ready:
+
+18
+00:00:31.880 --> 00:00:34.500
+courses, kits, and tools,
+
+19
+00:00:34.500 --> 00:00:35.440
+all
+
+20
+00:00:35.440 --> 00:00:36.140
+open.
+
+21
+00:00:36.140 --> 00:00:38.940
+The foundation is Mark Kashef’s Use Both
+
+22
+00:00:38.940 --> 00:00:40.920
+kit, with an open license.
+
+23
+00:00:40.920 --> 00:00:43.340
+It organizes work with both tools across
+
+24
+00:00:43.340 --> 00:00:45.060
+six levels, with
+
+25
+00:00:45.060 --> 00:00:47.200
+ready-to-use prompts and two small skills,
+
+26
+00:00:47.200 --> 00:00:48.320
+handoff and prime,
+
+27
+00:00:48.320 --> 00:00:50.640
+so you can switch assistants without explaining
+
+28
+00:00:50.640 --> 00:00:51.580
+the project again.
+
+29
+00:00:51.580 --> 00:00:54.180
+And one rule applies at every level:
+
+30
+00:00:54.180 --> 00:00:56.520
+the second assistant gets the same brief
+
+31
+00:00:56.520 --> 00:00:58.200
+and the real artifact.
+
+32
+00:00:58.200 --> 00:00:59.640
+The file, the diff,
+
+33
+00:00:59.640 --> 00:01:00.440
+the image.
+
+34
+00:01:00.440 --> 00:01:02.460
+Never a vague summary of what the
+
+35
+00:01:02.460 --> 00:01:03.900
+first one did.
+
+36
+00:01:03.900 --> 00:01:05.700
+Where should you start?
+
+37
+00:01:05.700 --> 00:01:07.100
+Choose a small task.
+
+38
+00:01:07.100 --> 00:01:09.540
+Write the brief and acceptance
+
+39
+00:01:09.540 --> 00:01:10.500
+criteria.
+
+40
+00:01:10.500 --> 00:01:13.080
+Ask one to make the plan and
+
+41
+00:01:13.080 --> 00:01:14.280
+the other to critique it,
+
+42
+00:01:14.280 --> 00:01:15.560
+using the same file,
+
+43
+00:01:15.560 --> 00:01:17.660
+for at most two rounds.
+
+44
+00:01:17.660 --> 00:01:19.260
+Before ending the session,
+
+45
+00:01:19.260 --> 00:01:20.340
+do the handoff.
+
+46
+00:01:20.340 --> 00:01:22.410
+You’ll find all this in the Codex
+
+47
+00:01:22.410 --> 00:01:24.880
+plus Claude section at eventos
+
+48
+00:01:24.880 --> 00:01:25.940
+dot inema dot pro,
+
+49
+00:01:25.940 --> 00:01:26.940
+slash
+
+50
+00:01:26.940 --> 00:01:29.100
+codex claude, in Portuguese,
+
+51
+00:01:29.100 --> 00:01:30.840
+English, and Spanish.
+
+52
+00:01:30.840 --> 00:01:32.860
+Open content from INEMA.CLUB.

@@ -1,0 +1,821 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:01.420
+You ask AI for a plan,
+
+2
+00:00:01.420 --> 00:00:03.320
+then ask it to review its own
+
+3
+00:00:03.320 --> 00:00:04.420
+work.
+
+4
+00:00:04.420 --> 00:00:05.780
+It approves it.
+
+5
+00:00:05.780 --> 00:00:06.980
+Every time.
+
+6
+00:00:06.980 --> 00:00:08.640
+The model that wrote the plan,
+
+7
+00:00:08.640 --> 00:00:10.320
+especially in the same session,
+
+8
+00:00:10.320 --> 00:00:12.520
+tends to think everything is fine.
+
+9
+00:00:12.520 --> 00:00:13.460
+I’m Nei Maldaner,
+
+10
+00:00:13.460 --> 00:00:15.680
+and the solution is simple:
+
+11
+00:00:15.680 --> 00:00:18.580
+one plans, the other critiques.
+
+12
+00:00:18.580 --> 00:00:20.960
+Claude and Codex complement each other when
+
+13
+00:00:20.960 --> 00:00:23.180
+each handles one part and the other
+
+14
+00:00:23.180 --> 00:00:25.020
+checks the actual artifact.
+
+15
+00:00:25.020 --> 00:00:25.900
+In this video,
+
+16
+00:00:25.900 --> 00:00:27.540
+I’ll show you how to use them
+
+17
+00:00:27.540 --> 00:00:31.400
+together and everything INEMA already has ready:
+
+18
+00:00:31.880 --> 00:00:34.500
+courses, kits, and tools,
+
+19
+00:00:34.500 --> 00:00:35.440
+all
+
+20
+00:00:35.440 --> 00:00:36.140
+open.
+
+21
+00:00:36.140 --> 00:00:38.940
+The foundation is Mark Kashef’s Use Both
+
+22
+00:00:38.940 --> 00:00:40.920
+kit, with an open license.
+
+23
+00:00:40.920 --> 00:00:43.340
+It organizes work with both tools across
+
+24
+00:00:43.340 --> 00:00:45.060
+six levels, with
+
+25
+00:00:45.060 --> 00:00:47.200
+ready-to-use prompts and two small skills,
+
+26
+00:00:47.200 --> 00:00:48.320
+handoff and prime,
+
+27
+00:00:48.320 --> 00:00:50.640
+so you can switch assistants without explaining
+
+28
+00:00:50.640 --> 00:00:51.580
+the project again.
+
+29
+00:00:51.580 --> 00:00:54.180
+And one rule applies at every level:
+
+30
+00:00:54.180 --> 00:00:56.520
+the second assistant gets the same brief
+
+31
+00:00:56.520 --> 00:00:58.200
+and the real artifact.
+
+32
+00:00:58.200 --> 00:00:59.640
+The file, the diff,
+
+33
+00:00:59.640 --> 00:01:00.440
+the image.
+
+34
+00:01:00.440 --> 00:01:02.460
+Never a vague summary of what the
+
+35
+00:01:02.460 --> 00:01:03.900
+first one did.
+
+36
+00:01:03.900 --> 00:01:05.960
+Level one: let the two discuss.
+
+37
+00:01:05.960 --> 00:01:07.920
+One writes the plan,
+
+38
+00:01:07.920 --> 00:01:10.940
+the other critiques the same file,
+
+39
+00:01:10.940 --> 00:01:13.480
+read-only, with evidence and severity.
+
+40
+00:01:13.480 --> 00:01:15.280
+At most two rounds,
+
+41
+00:01:15.280 --> 00:01:18.600
+because two AIs agreeing isn’t proof.
+
+42
+00:01:18.600 --> 00:01:20.300
+Level two, optional:
+
+43
+00:01:20.300 --> 00:01:23.120
+generate images, only if there’s an image
+
+44
+00:01:23.120 --> 00:01:23.940
+tool in the session.
+
+45
+00:01:23.940 --> 00:01:26.360
+Done means the real file is open
+
+46
+00:01:26.360 --> 00:01:28.520
+at its intended size.
+
+47
+00:01:28.520 --> 00:01:31.540
+Level three: split building and reviewing.
+
+48
+00:01:31.540 --> 00:01:33.300
+One builds on a branch,
+
+49
+00:01:33.300 --> 00:01:35.340
+the other reviews the diff against the
+
+50
+00:01:35.340 --> 00:01:37.180
+brief and tests.
+
+51
+00:01:37.480 --> 00:01:39.720
+The tests and you decide what goes
+
+52
+00:01:39.720 --> 00:01:40.120
+in.
+
+53
+00:01:40.120 --> 00:01:41.210
+Level
+
+54
+00:01:41.210 --> 00:01:43.420
+four: supervised computer use.
+
+55
+00:01:43.420 --> 00:01:45.440
+The assistant prepares an action in an
+
+56
+00:01:45.440 --> 00:01:48.340
+interface and stops before submitting it.
+
+57
+00:01:48.340 --> 00:01:51.460
+Passwords, payments, and important submissions stay with
+
+58
+00:01:51.460 --> 00:01:51.640
+you.
+
+59
+00:01:51.640 --> 00:01:52.840
+Level
+
+60
+00:01:52.950 --> 00:01:55.020
+five: a goal with a stopping condition.
+
+61
+00:01:55.020 --> 00:01:56.940
+Define observable success,
+
+62
+00:01:56.940 --> 00:01:58.480
+which tests to run,
+
+63
+00:01:58.480 --> 00:02:00.340
+what output to expect,
+
+64
+00:02:00.340 --> 00:02:01.800
+and limits on files,
+
+65
+00:02:01.800 --> 00:02:04.200
+rounds, and spend.
+
+66
+00:02:04.480 --> 00:02:06.160
+Asking it to stop in two hours
+
+67
+00:02:06.160 --> 00:02:07.380
+is a request,
+
+68
+00:02:07.380 --> 00:02:08.620
+not a limit.
+
+69
+00:02:08.620 --> 00:02:11.600
+Level six: handoff and prime.
+
+70
+00:02:11.600 --> 00:02:14.080
+Handoff saves the state in a portable
+
+71
+00:02:14.080 --> 00:02:16.620
+file, and prime makes the next assistant
+
+72
+00:02:16.620 --> 00:02:19.540
+read and verify that state before continuing.
+
+73
+00:02:19.540 --> 00:02:21.580
+In practice,
+
+74
+00:02:21.880 --> 00:02:22.880
+who does what?
+
+75
+00:02:22.880 --> 00:02:25.660
+For planning, Claude writes and Codex critiques
+
+76
+00:02:25.660 --> 00:02:27.620
+the assumptions until there’s a plan with
+
+77
+00:02:27.620 --> 00:02:29.840
+scope and acceptance tests.
+
+78
+00:02:30.120 --> 00:02:31.500
+To build a feature,
+
+79
+00:02:31.500 --> 00:02:34.040
+Claude builds and Codex reviews the diff.
+
+80
+00:02:34.040 --> 00:02:35.340
+For a tough bug,
+
+81
+00:02:35.340 --> 00:02:37.600
+use Codex with a bounded goal and
+
+82
+00:02:37.600 --> 00:02:38.560
+a human checkpoint.
+
+83
+00:02:38.560 --> 00:02:39.940
+To review a document,
+
+84
+00:02:39.940 --> 00:02:41.820
+either one can write and the other
+
+85
+00:02:41.820 --> 00:02:43.460
+can check the facts.
+
+86
+00:02:43.460 --> 00:02:45.380
+To switch sessions or models,
+
+87
+00:02:45.380 --> 00:02:46.980
+use handoff and prime.
+
+88
+00:02:46.980 --> 00:02:50.160
+One note: these are editorial choices,
+
+89
+00:02:50.160 --> 00:02:51.660
+not a measured ranking.
+
+90
+00:02:51.660 --> 00:02:54.080
+Test them and stick with the route
+
+91
+00:02:54.080 --> 00:02:56.600
+that gives you the best evidence.
+
+92
+00:02:57.040 --> 00:02:59.500
+Mark Kashef’s video shows three ways to
+
+93
+00:02:59.500 --> 00:03:01.120
+connect the two.
+
+94
+00:03:01.280 --> 00:03:03.880
+The official Codex plugin for Claude Code.
+
+95
+00:03:03.880 --> 00:03:05.580
+One CLI calling the other,
+
+96
+00:03:05.580 --> 00:03:07.820
+with the response saved to a Markdown
+
+97
+00:03:07.820 --> 00:03:08.800
+file:
+
+98
+00:03:08.800 --> 00:03:10.640
+codex exec in read-only mode,
+
+99
+00:03:10.640 --> 00:03:13.520
+or claude minus p the other way
+
+100
+00:03:13.520 --> 00:03:13.940
+around.
+
+101
+00:03:13.940 --> 00:03:16.260
+And a pull request reviewed by the
+
+102
+00:03:16.260 --> 00:03:17.160
+other model.
+
+103
+00:03:17.160 --> 00:03:18.480
+In the author’s view,
+
+104
+00:03:18.480 --> 00:03:21.140
+Claude is optimistic and good at planning,
+
+105
+00:03:21.140 --> 00:03:24.260
+while Codex is pessimistic and good at
+
+106
+00:03:24.260 --> 00:03:25.100
+finding flaws.
+
+107
+00:03:25.100 --> 00:03:26.820
+One warning:
+
+108
+00:03:27.220 --> 00:03:30.940
+Codex’s goal command pursues the goal exhaustively,
+
+109
+00:03:30.940 --> 00:03:32.130
+taking
+
+110
+00:03:32.130 --> 00:03:34.520
+three to five times more time and
+
+111
+00:03:34.520 --> 00:03:35.320
+tokens.
+
+112
+00:03:35.320 --> 00:03:36.700
+Set a real limit:
+
+113
+00:03:36.700 --> 00:03:38.700
+a timeout, a budget,
+
+114
+00:03:38.700 --> 00:03:40.510
+and a number of rounds.
+
+115
+00:03:40.510 --> 00:03:43.480
+INEMA’s courses and projects about these two
+
+116
+00:03:43.480 --> 00:03:45.040
+tools aren’t
+
+117
+00:03:45.480 --> 00:03:46.400
+separate pieces.
+
+118
+00:03:46.400 --> 00:03:48.180
+They form a path.
+
+119
+00:03:48.180 --> 00:03:51.040
+First, understand them with the Claude para
+
+120
+00:03:51.040 --> 00:03:53.160
+Codex course, Codex Básico,
+
+121
+00:03:53.160 --> 00:03:55.340
+Master Codex, and Codex Cheat Sheet.
+
+122
+00:03:55.340 --> 00:03:59.580
+Then migrate or stay agnostic with the
+
+123
+00:03:59.580 --> 00:04:01.860
+agente claude codex kit.
+
+124
+00:04:01.860 --> 00:04:04.900
+Next, use both together with Use Both.
+
+125
+00:04:04.900 --> 00:04:05.820
+Finally,
+
+126
+00:04:05.820 --> 00:04:07.880
+automate the debate with claudex.
+
+127
+00:04:07.880 --> 00:04:10.040
+The common thread is the project’s Markdown
+
+128
+00:04:10.040 --> 00:04:12.200
+files: AGENTS dot md,
+
+129
+00:04:12.200 --> 00:04:13.600
+tasks, and handoffs,
+
+130
+00:04:13.600 --> 00:04:16.160
+which any runtime can read.
+
+131
+00:04:16.160 --> 00:04:18.520
+So what’s the difference between claudex and
+
+132
+00:04:18.520 --> 00:04:19.480
+Use Both?
+
+133
+00:04:19.480 --> 00:04:21.340
+claudex is software,
+
+134
+00:04:21.520 --> 00:04:23.060
+a Claude Code plugin:
+
+135
+00:04:23.060 --> 00:04:25.540
+Claude writes PLAN dot md,
+
+136
+00:04:25.700 --> 00:04:27.900
+Codex critiques it from three angles in
+
+137
+00:04:27.900 --> 00:04:30.200
+a loop, until it approves or reaches
+
+138
+00:04:30.200 --> 00:04:31.840
+the number of rounds you set.
+
+139
+00:04:31.840 --> 00:04:34.180
+It has status and rollback.
+
+140
+00:04:34.180 --> 00:04:35.700
+Use Both is a method:
+
+141
+00:04:35.700 --> 00:04:37.380
+a guide, prompts,
+
+142
+00:04:37.380 --> 00:04:39.540
+templates, and the two skills,
+
+143
+00:04:39.540 --> 00:04:41.820
+covering all six workflows.
+
+144
+00:04:41.860 --> 00:04:43.860
+They complement each other.
+
+145
+00:04:43.860 --> 00:04:45.120
+For a big plan,
+
+146
+00:04:45.120 --> 00:04:46.070
+use
+
+147
+00:04:46.070 --> 00:04:46.460
+claudex.
+
+148
+00:04:46.460 --> 00:04:48.560
+For everything else—reviewing a diff,
+
+149
+00:04:48.560 --> 00:04:50.300
+a goal with a stopping condition,
+
+150
+00:04:50.300 --> 00:04:52.880
+switching sessions—use Use Both.
+
+151
+00:04:52.880 --> 00:04:54.160
+A real example.
+
+152
+00:04:54.160 --> 00:04:55.133
+At
+
+153
+00:04:55.133 --> 00:04:58.120
+INEMA, Claude Code calls Codex in non-interactive
+
+154
+00:04:58.120 --> 00:05:00.560
+mode and asks its image generator for
+
+155
+00:05:00.560 --> 00:05:02.260
+a PNG file in a folder.
+
+156
+00:05:02.260 --> 00:05:03.860
+That’s how catalog covers,
+
+157
+00:05:03.860 --> 00:05:06.240
+guide banners with correct Portuguese text,
+
+158
+00:05:06.240 --> 00:05:07.780
+and course scenes are made.
+
+159
+00:05:07.780 --> 00:05:09.100
+If Codex fails,
+
+160
+00:05:09.100 --> 00:05:12.420
+it falls back automatically to local FLUX.2
+
+161
+00:05:12.420 --> 00:05:13.040
+klein.
+
+162
+00:05:13.040 --> 00:05:15.580
+We took three habits from the kit:
+
+163
+00:05:15.580 --> 00:05:18.480
+check the tool and cost before generating,
+
+164
+00:05:18.480 --> 00:05:20.980
+inspect the image at its real size,
+
+165
+00:05:20.980 --> 00:05:24.120
+and save sibling versions instead of overwriting.
+
+166
+00:05:24.120 --> 00:05:26.700
+And here’s everything available to you,
+
+167
+00:05:26.700 --> 00:05:28.000
+all open.
+
+168
+00:05:28.000 --> 00:05:29.450
+Six courses:
+
+169
+00:05:29.450 --> 00:05:30.820
+Claude para
+
+170
+00:05:30.820 --> 00:05:32.660
+Codex, in Portuguese,
+
+171
+00:05:32.660 --> 00:05:33.700
+English,
+
+172
+00:05:33.700 --> 00:05:35.380
+and Spanish;
+
+173
+00:05:35.380 --> 00:05:38.920
+Codex Básico, the complete Codex CLI course;
+
+174
+00:05:38.920 --> 00:05:42.340
+Master Codex, the SaaS factory with agents;
+
+175
+00:05:42.340 --> 00:05:45.000
+iClaudeX, planning with Claude and Codex in
+
+176
+00:05:45.000 --> 00:05:46.210
+the terminal;
+
+177
+00:05:46.210 --> 00:05:49.460
+MakeClaudeX, from prompt to production plugin;
+
+178
+00:05:49.460 --> 00:05:50.660
+and
+
+179
+00:05:50.971 --> 00:05:53.346
+DeepClaudeX, multi model,
+
+180
+00:05:53.346 --> 00:05:55.720
+seventy, twenty, ten.
+
+181
+00:05:55.720 --> 00:05:57.040
+Plus the kits:
+
+182
+00:05:57.040 --> 00:05:57.947
+agente
+
+183
+00:05:57.947 --> 00:06:00.380
+claude codex, to migrate or stay agnostic;
+
+184
+00:06:00.380 --> 00:06:02.900
+Use Both, with the six levels;
+
+185
+00:06:02.900 --> 00:06:04.340
+the claudex CLI;
+
+186
+00:06:04.340 --> 00:06:05.880
+and Codex Cheat Sheet,
+
+187
+00:06:05.880 --> 00:06:06.940
+the quick reference.
+
+188
+00:06:06.940 --> 00:06:09.560
+Everything has a GitHub repository.
+
+189
+00:06:09.560 --> 00:06:11.360
+Where should you start?
+
+190
+00:06:11.360 --> 00:06:12.760
+Choose a small task.
+
+191
+00:06:12.760 --> 00:06:15.200
+Write the brief and acceptance
+
+192
+00:06:15.200 --> 00:06:16.160
+criteria.
+
+193
+00:06:16.160 --> 00:06:18.740
+Ask one to make the plan and
+
+194
+00:06:18.740 --> 00:06:19.940
+the other to critique it,
+
+195
+00:06:19.940 --> 00:06:21.220
+using the same file,
+
+196
+00:06:21.220 --> 00:06:23.320
+for at most two rounds.
+
+197
+00:06:23.320 --> 00:06:24.920
+Before ending the session,
+
+198
+00:06:24.920 --> 00:06:26.000
+do the handoff.
+
+199
+00:06:26.000 --> 00:06:28.070
+You’ll find all this in the Codex
+
+200
+00:06:28.070 --> 00:06:30.540
+plus Claude section at eventos
+
+201
+00:06:30.540 --> 00:06:31.600
+dot inema dot pro,
+
+202
+00:06:31.600 --> 00:06:32.600
+slash
+
+203
+00:06:32.600 --> 00:06:34.760
+codex claude, in Portuguese,
+
+204
+00:06:34.760 --> 00:06:36.500
+English, and Spanish.
+
+205
+00:06:36.500 --> 00:06:38.520
+Open content from INEMA.CLUB.
